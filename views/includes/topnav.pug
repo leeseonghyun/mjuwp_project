@@ -1,0 +1,30 @@
+.lsh-navbar
+  nav.navbar.navbar-expand-lg.navbar-light.bg-white
+    a.navbar-brand(href="/") Eventbrite
+    //- form.form-inline
+    //-   input.form-control(type="Search for Events", placeholder="collapse", data-target="#navbarNavDropdown", aria-controls="navbarNavDropdown", aria-expanded="false", aria-label="Toggle navigation")
+    button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNavDropdown", aria-controls="navbarNavDropdown", aria-expanded="false", aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse.justify-content-end#navbarDropdown
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href="#") BROWSE EVENTS
+            span.sr-only (current)
+        li.nav-item.dropdown#navbarDropdownMenuLink1
+          a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") ORGANIZE
+          .dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
+            a.dropdown-item(href="#") Overview
+            a.dropdown-item(href="#") Pricing
+            a.dropdown-item(href="#") Blog
+            a.dropdown-item(href="#") Resources
+        li.nav-item.dropdown#navbarDropdownMenuLink2
+          a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") HELP
+          .dropdown-menu(aria-labelledby="navbarDropdownMenuLink3")
+            a.dropdown-item(href="#") Where are my tickets?
+            a.dropdown-item(href="#") How to contact the event organizer
+            a.dropdown-item(href="#") Help Center
+        li.nav-item
+          a.nav-link(href="#") SIGN IN
+        li.nav-item#create-event
+          a.nav-link(href="#") CREATE EVENT
+            

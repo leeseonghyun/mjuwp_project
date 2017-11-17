@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>mjuwp_project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- 네비바 -->
+    <div class="lsh-navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#">Eventbrite</a>
+        <!-- <form class="form-inline">
+          <input class="form-control" type="Search for Events" placeholder="Search for Events" aria-label="Search">
+        </form> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">BROWSE EVENTS <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ORGANIZE
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Overview</a>
+                <a class="dropdown-item" href="#">Pricing</a>
+                <a class="dropdown-item" href="#">Blog</a>
+                <a class="dropdown-item" href="#">Resources</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                HELP
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                <a class="dropdown-item" href="#">Where are my tickets?</a>
+                <a class="dropdown-item" href="#">How to contact the event organizer</a>
+                <a class="dropdown-item" href="#">Help Center</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">SIGN IN</a>
+            </li>
+            <li class="nav-item" id="create-event">
+              <a class="nav-link" href="#">CREATE EVENT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 슬라이드쇼 -->
+    <div class="slideshow">
+  		<img src="img/1.jpg" class="active">
+  		<img src="img/2.jpg">
+  		<img src="img/3.jpg">
+  		<img src="img/4.jpg">
+  	</div>
+
+    <!-- 중간 바 -->
+    <div class="card" id="bar">
+      <h2 class="display-4">Find your next experience</h2><br>
+      <div class="card-body">
+        <div class="form-group row justify-content-center">
+          <div class="col-4">
+            <input type="text" class="form-control" placeholder="Search events or categories">
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" placeholder="City or location">
+          </div>
+          <div class="col-auto">
+            <select class="custom-select" id="inlineFormCustomSelect">
+              <option selected>All Dates</option>
+              <option value="1">Today</option>
+              <option value="2">Tomorrow</option>
+              <option value="3">This week</option>
+              <option value="4">This weekend</option>
+              <option value="5">Next week</option>
+              <option value="6">Next month</option>
+            </select>
+          </div>
+          <div class="col-auto">
+            <button type="Search" class="btn">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 이벤트 그리드 -->
+    <div class="row popular-events">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img class="card-img-top" src="images/image1.png" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text"><small class="text-muted">FRI. OCT 1 1:00 PM</small></p>
+            <h6 class="card-title">This is Sample event1 - October 1. 2018</h6>
+            <p class="card-text"><small class="text-muted">Myongji Univ. | 명지대학교, Yong-in</small></p>
+          </div>
+          <div class="card-footer">
+            <a href="#">#Arts</a>
+            <a href="#">#Performance</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+  	<script src="slideshow.js"></script>
+  </body>
+</html>

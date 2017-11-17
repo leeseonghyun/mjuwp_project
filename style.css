@@ -1,0 +1,94 @@
+/* 폰트 설정 */
+body {
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+}
+
+/*--------------------------------------*/
+
+/* Navbar 의 여백 조정 */
+.lsh-navbar .navbar {
+  padding: 0 1rem;
+  height: 3.8rem;
+}
+/* NavBar 의 로고 부분 */
+.lsh-navbar .navbar-brand {
+  color: #E7703F;
+  font-family: "Benton Sans";
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.1px;
+}
+/* NavBar 의 로고 hover 강제 비활성화 */
+.lsh-navbar .navbar-brand:hover {
+  background: #FFFFFF;
+  color: #E7703F;
+}
+
+.lsh-navbar .navbar-collapse {
+  height: 60px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 12px;
+  padding: 22px 20px 19px 20px;
+}
+
+/* Navbar의 버튼들 부분*/
+.navbar-nav .nav-item {
+  border-left: 0.1px solid #EFF2F5;
+}
+
+.navbar-nav > .nav-item {
+  margin: 0;
+}
+
+.navbar a:hover {
+  background-color: #EFF2F5;
+}
+
+/*--------------------------------------*/
+
+.slideshow {
+  height: 500px;
+  position: relative;
+  padding: 0;
+  margin-top: -8em; /* 바 위로 올려서 겹침 효과 */
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.slideshow img.active {
+  opacity: 1.0;
+}
+
+/*--------------------------------------*/
+
+.card {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+  border-radius: 4px;
+}
+
+.card h2 {
+  text-align: center;
+  color: #E7703F;
+}
+
+.form-group > .col-4, .form-group > .col-auto {
+  padding: 0;
+}
+
+.form-group .btn {
+  color: #FFFFFF;
+  background-color: #E7703F;
+}
