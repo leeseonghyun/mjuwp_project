@@ -8,5 +8,27 @@ block img-unit
     img(src="/images/slideshow/4.jpg")
       
       
-block content
+block card-content
+  .card#bar
+    h2.display-4 Find your next experience
+    .card-body
+      .form-group.row.justify-content-center
+        .col-4
+          input.form-control(type="text", placeholder="Search events or categories")
+        .col-auto
+          input.form-control(type="text", placeholder="City or location")
+        .col-auto
+          select.custom-select#inlineFormCustomSelect
+            option(selected) All Dates
+            option(value="1") Today
+            option(value="2") Tomorrow
+            option(value="3") This week
+            option(value="4") This weekend
+            option(value="5") Next week
+            option(value="6") Next month
+        .col-auto
+          button.btn(type="Search") Search
+          
+            
+            
   

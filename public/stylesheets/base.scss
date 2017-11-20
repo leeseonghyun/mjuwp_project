@@ -70,3 +70,33 @@ body {
     opacity: 1.0;
   }
 }
+
+/*--------------------------------------*/
+
+.card {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+  border-radius: 4px;
+
+  h2 {
+    text-align: center;
+    color: #E7703F;
+  }
+}
+.form-group {
+  .col-4 {
+    padding: 0;
+  }
+  .col-auto {
+    padding: 0;
+  }
+
+  .btn {
+    color: #FFFFFF;
+    background-color: #E7703F;
+  }
+}
