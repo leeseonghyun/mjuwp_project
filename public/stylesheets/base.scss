@@ -100,3 +100,32 @@ body {
     background-color: #E7703F;
   }
 }
+
+/*--------------------------------------*/
+
+.footer {
+  background-color: #282C35;
+
+  .footer-pad {
+    width: 8em;
+
+    .footer-links {
+      color: #ADB0B6;
+      list-style-type: none;
+      display: inline-block;
+    }
+
+    .footer-links {
+      p {
+        font-size: 15px;
+      }
+
+      li {
+        a {
+          color: #ADB0B6;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
