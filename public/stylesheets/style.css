@@ -13,6 +13,8 @@ body {
   .lsh-navbar .navbar {
     padding: 0 1rem;
     height: 3.8rem; }
+    .lsh-navbar .navbar a:hover.navbar-brand {
+      background-color: #FFFF; }
     .lsh-navbar .navbar a:hover {
       background-color: #EFF2F5; }
   .lsh-navbar .navbar-brand {
@@ -73,6 +75,59 @@ body {
 .form-group .btn {
   color: #FFFFFF;
   background-color: #E7703F; }
+
+/*--------------------------------------*/
+.footer {
+  background-color: #282C35; }
+  .footer .footer-pads {
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto; }
+    .footer .footer-pads .events-footer {
+      margin-bottom: 1em;
+      color: #ADB0B6; }
+      .footer .footer-pads .events-footer p {
+        font-size: 18px;
+        color: #ADB0B6;
+        margin-bottom: 10px; }
+      .footer .footer-pads .events-footer li {
+        margin-bottom: 1px; }
+        .footer .footer-pads .events-footer li a {
+          color: #ADB0B6;
+          font-size: 12px; }
+    .footer .footer-pads .countries-footer {
+      margin-bottom: 1em;
+      color: #ADB0B6; }
+      .footer .footer-pads .countries-footer p {
+        font-size: 18px;
+        color: #ADB0B6;
+        margin-bottom: 10px; }
+      .footer .footer-pads .countries-footer li {
+        margin-bottom: 1px;
+        display: inline-block;
+        padding-right: 1em; }
+        .footer .footer-pads .countries-footer li a {
+          color: #ADB0B6;
+          font-size: 12px; }
+    .footer .footer-pads .normal-footer {
+      margin-bottom: 1em;
+      color: #ADB0B6; }
+      .footer .footer-pads .normal-footer li {
+        margin-bottom: 1px;
+        display: inline-block;
+        padding-right: 1em; }
+        .footer .footer-pads .normal-footer li a {
+          color: #ADB0B6;
+          font-size: 15px; }
+        .footer .footer-pads .normal-footer li select {
+          color: #ADB0B6;
+          background-color: #282C35;
+          border-color: #ADB0B6;
+          width: 200px; }
+    .footer .footer-pads .copyright-footer {
+      color: #ADB0B6;
+      margin-left: auto;
+      margin-right: auto; }
 
 .form-signin {
   width: 300px;

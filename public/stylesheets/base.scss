@@ -15,6 +15,11 @@ body {
     padding: 0 1rem;
     height: 3.8rem;
 
+    a:hover.navbar-brand {
+      background-color: #FFFF;
+    }
+
+
     a:hover {
       background-color: #EFF2F5;
     }
@@ -106,26 +111,73 @@ body {
 .footer {
   background-color: #282C35;
 
-  .footer-pad {
-    width: 8em;
+  .footer-pads {
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 
-    .footer-links {
+    .events-footer {
+      margin-bottom: 1em;
       color: #ADB0B6;
-      list-style-type: none;
-      display: inline-block;
-    }
 
-    .footer-links {
       p {
-        font-size: 15px;
+        font-size: 18px;
+        color: #ADB0B6;
+        margin-bottom: 10px;
       }
 
       li {
+        margin-bottom: 1px;
         a {
           color: #ADB0B6;
           font-size: 12px;
         }
       }
+    }
+    .countries-footer {
+      margin-bottom: 1em;
+      color: #ADB0B6;
+
+      p {
+        font-size: 18px;
+        color: #ADB0B6;
+        margin-bottom: 10px;
+      }
+
+      li {
+        margin-bottom: 1px;
+        display: inline-block;
+        padding-right: 1em;
+        a {
+          color: #ADB0B6;
+          font-size: 12px;
+        }
+      }
+    }
+    .normal-footer {
+      margin-bottom: 1em;
+      color: #ADB0B6;
+
+      li {
+        margin-bottom: 1px;
+        display: inline-block;
+        padding-right: 1em;
+        a {
+          color: #ADB0B6;
+          font-size: 15px;
+        }
+        select {
+          color: #ADB0B6;
+          background-color: #282C35;
+          border-color: #ADB0B6;
+          width: 200px;
+        }
+      }
+    }
+    .copyright-footer {
+      color: #ADB0B6;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

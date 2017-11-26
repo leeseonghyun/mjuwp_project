@@ -1,5 +1,10 @@
 extends layout
 
+block top-nav
+  .lsh-navbar
+    nav.navbar.navbar-expand-lg.navbar-light.bg-white
+      a.navbar-brand(href="/") Eventbrite
+  
 block content
   .container
     .clearfix
@@ -33,3 +38,4 @@ block content
           |
           a(href='/reset-password') Reset Password
       
+block footer
