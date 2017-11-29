@@ -9,7 +9,10 @@ block content
   .container
     .clearfix
       form.form-signin(action='/signin', method='POST')
-        h3.form-signin-heading Signin
+        .logo
+          img.mainlogo(src="/images/mainlogo/mainlogo.png")
+        h3.form-signin-heading.text-center Let's Get Started
+        p.form-signin.text-center Enter your email to signup or log in.
         label.sr-only(for='email') Email address
         input(
           type='email', id='email', name='email', class='form-control', 
@@ -25,8 +28,8 @@ block content
             input(type="checkbox", value="remember-me")
             |
             | Remember me
-        button.btn.btn-primary.btn-block(type='submit') Signin
-        a.btn.btn-dark.btn-block(href='/auth/facebook')
+        button.btn.btn-signin.btn-block(type='submit') Get Started
+        a.btn.btn-signin-facebook.btn-block(href='/auth/facebook')
           i.fa.fa-facebook.fa-lg
           | &nbsp;
           | Signin with Facebook

@@ -55,7 +55,8 @@ body {
 
 /*--------------------------------------*/
 .card {
-  max-width: 60%;
+  max-width: 1050px;
+  max-height: 210px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 35px;
@@ -65,16 +66,13 @@ body {
   .card h2 {
     text-align: center;
     color: #E7703F; }
-
-.form-group .col-4 {
-  padding: 0; }
-
-.form-group .col-auto {
-  padding: 0; }
-
-.form-group .btn {
-  color: #FFFFFF;
-  background-color: #E7703F; }
+  .card .form-group .col-4 {
+    padding: 0; }
+  .card .form-group .col-auto {
+    padding: 0; }
+  .card .form-group .btn {
+    color: #FFFFFF;
+    background-color: #E7703F; }
 
 /*--------------------------------------*/
 .footer {
@@ -125,16 +123,33 @@ body {
           border-color: #ADB0B6;
           width: 200px; }
     .footer .footer-pads .copyright-footer {
-      color: #ADB0B6;
-      margin-left: auto;
-      margin-right: auto; }
+      color: #ADB0B6; }
+
+/*--------------------------------------*/
+.grid .grid-section-heading {
+  font-size: 1.5em; }
+
+.grid .container {
+  max-width: 1050px;
+  padding: 0; }
+  .grid .container .row {
+    padding-bottom: 2em; }
+  .grid .container .card {
+    height: 210px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-style: none; }
+    .grid .container .card .card-img {
+      height: inherit;
+      width: 100%; }
+    .grid .container .card .card-img-overlay {
+      width: 100%;
+      padding: 0; }
 
 .form-signin {
   width: 300px;
   margin: 0 auto;
-  padding: 1em; }
-  .form-signin .form-signin-heading, .form-signin .checkbox {
-    margin-bottom: 10px; }
+  margin-bottom: 1em; }
   .form-signin .form-control {
     position: relative;
     box-sizing: border-box;
@@ -152,6 +167,21 @@ body {
     border-top-right-radius: 0; }
   .form-signin .sub {
     margin: 1em 0; }
+  .form-signin .logo {
+    margin-left: auto;
+    margin-right: auto; }
+    .form-signin .logo .mainlogo {
+      width: 72px; }
+
+.btn-signin {
+  border-radius: 40px;
+  color: #FFFFFF;
+  background-color: #E7703F; }
+
+.btn-signin-facebook {
+  border-radius: 40px;
+  color: #FFFFFF;
+  background-color: #4267B2; }
 
 .main-title .small {
   float: right;

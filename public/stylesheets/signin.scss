@@ -1,9 +1,9 @@
 .form-signin {
   width: 300px;
   margin: 0 auto;
-  padding: 1em;
+  margin-bottom: 1em;
   .form-signin-heading, .checkbox {
-    margin-bottom: 10px;
+
   }
   .form-control {
     position: relative;
@@ -27,4 +27,27 @@
   .sub {
     margin: 1em 0;
   }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+
+    .mainlogo {
+      width: 72px;
+    }
+  }
+}
+
+
+
+.btn-signin {
+  border-radius: 40px;
+  color: #FFFFFF;
+  background-color: #E7703F;
+}
+
+.btn-signin-facebook {
+  border-radius: 40px;
+  color: #FFFFFF;
+  background-color: #4267B2;
 }
