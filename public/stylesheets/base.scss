@@ -15,12 +15,7 @@ body {
     padding: 0 1rem;
     height: 3.8rem;
 
-    a:hover.navbar-brand {
-      background-color: #FFFF;
-    }
-
-
-    a:hover {
+    .nav-link:hover {
       background-color: #EFF2F5;
     }
   }
