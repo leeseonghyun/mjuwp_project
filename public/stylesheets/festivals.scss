@@ -1,9 +1,14 @@
 .main-title {
+  padding-bottom: .5em;
   .small {
     float: right;
     font-size: 1rem;
     color: #bbb;
   }
+}
+.sub-title {
+  padding: .5em 0;
+  color: #888;
 }
 .question {
   line-height: 160%;
@@ -34,7 +39,7 @@
   font-weight: bold;
   color: #0f5ca6;
 }
-.questions {
+.festivals {
   .content {
     max-height: 5em;
     overflow: hidden;
@@ -67,5 +72,20 @@
       margin-bottom: 0.5em;
       color: #bbb;
     }
+  }
+}
+
+.form-group {
+  label {
+    margin-right: .5em;
+  }
+  .input-daterange {
+    p {
+      margin:0 1em;
+    }
+  }
+  .price {
+    display: none;
+    margin-top: .5em;
   }
 }

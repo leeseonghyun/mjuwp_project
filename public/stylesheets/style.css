@@ -63,14 +63,16 @@ body {
   border-radius: 4px; }
   .card h2 {
     text-align: center;
-    color: #E7703F; }
+    color: #E7703F;
+    font-family: 'Benton sans'; }
   .card .form-group .col-4 {
     padding: 0; }
   .card .form-group .col-auto {
     padding: 0; }
   .card .form-group .btn {
     color: #FFFFFF;
-    background-color: #E7703F; }
+    background-color: #E7703F;
+    width: 10em; }
 
 /*--------------------------------------*/
 .footer {
@@ -125,6 +127,7 @@ body {
 
 /*--------------------------------------*/
 .grid .grid-section-heading {
+  margin-top: 1em;
   font-size: 1.5em; }
 
 .grid .container {
@@ -166,6 +169,7 @@ body {
   .form-signin .sub {
     margin: 1em 0; }
   .form-signin .logo {
+    text-align: center;
     margin-left: auto;
     margin-right: auto; }
     .form-signin .logo .mainlogo {
@@ -181,10 +185,16 @@ body {
   color: #FFFFFF;
   background-color: #4267B2; }
 
-.main-title .small {
-  float: right;
-  font-size: 1rem;
-  color: #bbb; }
+.main-title {
+  padding-bottom: .5em; }
+  .main-title .small {
+    float: right;
+    font-size: 1rem;
+    color: #bbb; }
+
+.sub-title {
+  padding: .5em 0;
+  color: #888; }
 
 .question {
   line-height: 160%;
@@ -210,7 +220,7 @@ body {
   font-weight: bold;
   color: #0f5ca6; }
 
-.questions .content {
+.festivals .content {
   max-height: 5em;
   overflow: hidden;
   text-overflow: ellipsis; }
@@ -235,5 +245,15 @@ body {
   .show .answer .content {
     margin-bottom: 0.5em;
     color: #bbb; }
+
+.form-group label {
+  margin-right: .5em; }
+
+.form-group .input-daterange p {
+  margin: 0 1em; }
+
+.form-group .price {
+  display: none;
+  margin-top: .5em; }
 
 /*# sourceMappingURL=style.css.map */

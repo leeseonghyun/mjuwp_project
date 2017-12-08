@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 var schema = new Schema({
   author: { type: Schema.Types.ObjectId, ref: 'User' },
   title: {type: String, trim: true, required: true},
-  content: {type: String, trim: true, required: true},
+  location: {type: String, trim: true, required: true},
+  starts: {type: Date, trim: true, required: true},
+  ends: {type: Date, trim: true, required: true},
   tags: [String],
   numLikes: {type: Number, default: 0},
   numAnswers: {type: Number, default: 0},
@@ -16,6 +18,6 @@ var schema = new Schema({
   toObject: {virtuals: true}
 });
 schema.plugin(mongoosePaginate);
-var Question = mongoose.model('Question', schema);
+var Festival = mongoose.model('Festival', schema);
 
-module.exports = Question;
+module.exports = Festival;

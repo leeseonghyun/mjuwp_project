@@ -1,0 +1,17 @@
+.content= festival.content
+.tags.badges
+  each tag in festival.tags
+    span.badge.badge-phill.badge-secondary= tag
+    | 
+.row
+  .col-sm
+    .numbers.
+      #[span.number.num-votes= festival.numLikes] likes,
+      #[span.number.num-answers= festival.numAnswers] answers,
+      #[span.number.num-views= festival.numReads] reads
+  .col-sm
+    .author
+      | asked on #{moment(festival.createdAt).format('YYYY-MM-DD')}
+      if festival.author
+        | 
+        | by #[a(href=`/users/${festival.author.id}`)= festival.author.name] 

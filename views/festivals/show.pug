@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+  .container
+    h1.main-title= festival.title
+
+    .festival.show
+      .content= festival.content
+      include _festival
+
+      .buttons
+        button.btn.btn-primary #[i.fa.fa-thumbs-up] Like
+        if currentUser && festival.author.id == currentUser.id
+          | 
+          a.btn.btn-outline-secondary(href=`/festivals/${festival.id}/edit`) Edit
+          | 
+          a.btn.btn-outline-danger.need-confirm-btn(href=`/festivals/${festival.id}?_method=delete`) Delete
+      
+    if festival.numAnswers > 0
+      hr
+      h3 #{festival.numAnswers} Answer(s)
+      .answers.show
+        each answer in answers
+          include _answer
+
+    form(action=`/festivals/${festival.id}/answers`, method='POST')
+      .form-group
+        label(for='answer') Your Answer
+        textarea.form-control(name="content", rows="5")
+      button.btn.btn-primary(type="submit") Post Your Answer

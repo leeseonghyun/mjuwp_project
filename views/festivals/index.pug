@@ -1,0 +1,28 @@
+extends ../layout
+
+include ../includes/_paginate
+
+block content
+  .container
+    form.form-inline.search-input-group(action='/festivals', method='GET')
+      i.fa.fa-search
+      input.form-control.mr-sm-2(type='text', name='term', placeholder='Search', aria-label='Search', value=term)
+
+    h1.main-title 
+      | Questions
+      if festivals.total > 0
+        .small Total #{festivals.total} event(s)
+
+    if festivals.total <= 0 
+      .alert.alert-info No events available yet
+    else
+      .festivals
+        each festival in festivals.docs
+          .festival
+            a.title(href=`/festivals/${festival.id}`)= festival.title
+            include _festival
+
+      +paginate(festivals, '/festivals', {query: "???XXX&&"})
+
+    hr
+    a.btn.btn-primary(href='/festivals/new') Ask Event

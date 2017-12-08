@@ -6,15 +6,18 @@ html
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+    link(rel="stylesheet" href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js')
     script(src='/javascripts/application.js')
     script(src='/javascripts/slideshow.js')
+    script(src='/javascripts/datepicker.js')
+    script(src='/javascripts/check.js')
   body
     block top-nav
       include ./includes/topnav
-    block img-unit
     if flashMessages
       each texts, type in flashMessages
         .container
@@ -22,7 +25,9 @@ html
             each msg in texts
               | #{msg} 
             button.close(type='button', data-dismiss='alert', aria-label='close')
-              span(aria-hidden='true') &times;
+              span(aria-hidden='true') &times;  
+    block img-unit
+    
     block content
     block card-content
     block grid-content

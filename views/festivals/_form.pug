@@ -1,0 +1,181 @@
+h2.sub-title 1. Event Details
+.form-group
+  label(for="title") EVENT TITLE
+  input.form-control(type="text", name="title", placeholder="Give it a short distinct name", value=festival.title)
+.form-group
+  label(for="location") LOCATION
+  input.form-control(type="text", name="title", placeholder="Search for a venue or Address", value=festival.location)
+.form-group
+  label(for="startsends") STARTS &amp; ENDS
+  .input-daterange.input-group
+    input#from(type="text", name="from")
+    select.custom-select.from-time
+      option(value='1') 00:00
+      option(value='2') 00:30
+      option(value='3') 01:00
+      option(value='4') 01:30
+      option(value='5') 02:00
+      option(value='6') 02:30
+      option(value='8') 03:00
+      option(value='9') 03:30
+      option(value='10') 04:00
+      option(value='11') 04:30
+      option(value='12') 05:00
+      option(value='13') 05:30
+      option(value='14') 06:00
+      option(value='15') 06:30
+      option(value='16') 07:00
+      option(value='17') 07:30
+      option(value='18') 08:00
+      option(value='19') 08:30
+      option(value='20') 09:00
+      option(value='21') 09:30
+      option(value='22') 10:00
+      option(value='23') 10:30
+      option(value='24') 11:00
+      option(value='25') 11:30
+      option(value='26') 12:00
+      option(value='27') 12:30
+      option(value='28') 13:00
+      option(value='29') 13:30
+      option(value='30') 14:00
+      option(value='31') 14:30
+      option(value='32') 15:00
+      option(value='33') 15:30
+      option(value='34') 16:00
+      option(value='35') 16:30
+      option(value='36') 17:00
+      option(value='37') 17:30
+      option(value='38') 18:00
+      option(value='39') 18:30
+      option(value='40') 19:00
+      option(value='41') 19:30
+      option(value='42') 20:00
+      option(value='43') 20:30
+      option(value='44') 21:00
+      option(value='45') 21:30
+      option(value='46') 22:00
+      option(value='47') 22:30
+      option(value='48') 23:00
+      option(value='49') 23:30
+    p.text-center ~
+    input#to(type="text", name="to")
+    select.custom-select.to-time
+        option(value='1') 00:00
+        option(value='2') 00:30
+        option(value='3') 01:00
+        option(value='4') 01:30
+        option(value='5') 02:00
+        option(value='6') 02:30
+        option(value='8') 03:00
+        option(value='9') 03:30
+        option(value='10') 04:00
+        option(value='11') 04:30
+        option(value='12') 05:00
+        option(value='13') 05:30
+        option(value='14') 06:00
+        option(value='15') 06:30
+        option(value='16') 07:00
+        option(value='17') 07:30
+        option(value='18') 08:00
+        option(value='19') 08:30
+        option(value='20') 09:00
+        option(value='21') 09:30
+        option(value='22') 10:00
+        option(value='23') 10:30
+        option(value='24') 11:00
+        option(value='25') 11:30
+        option(value='26') 12:00
+        option(value='27') 12:30
+        option(value='28') 13:00
+        option(value='29') 13:30
+        option(value='30') 14:00
+        option(value='31') 14:30
+        option(value='32') 15:00
+        option(value='33') 15:30
+        option(value='34') 16:00
+        option(value='35') 16:30
+        option(value='36') 17:00
+        option(value='37') 17:30
+        option(value='38') 18:00
+        option(value='39') 18:30
+        option(value='40') 19:00
+        option(value='41') 19:30
+        option(value='42') 20:00
+        option(value='43') 20:30
+        option(value='44') 21:00
+        option(value='45') 21:30
+        option(value='46') 22:00
+        option(value='47') 22:30
+        option(value='48') 23:00
+        option(value='49') 23:30
+.form-group
+  label(for="festival") EVENT DISCRIPTION
+  textarea.form-control(name="content", rows="5")= festival.content
+.form-group
+  label(for="title") ORGANIZER NAME
+  input.form-control(type="text", name="title", placeholder="Who`s organizing this event?", value=festival.title)
+.form-group
+  label(for="festival") ORGANIZER DISCRIPTION
+  textarea.form-control(name="content", rows="5")= festival.content
+
+h2.sub-title 2. Create Tickets
+.form-group
+  label.form-check-label
+    input.form-check-input(type='checkbox')
+    |       NOT Free
+  input.form-control.price(type="text", name="price", placeholder="Enter ticket price", value=festival.price)
+  
+
+
+
+h2.sub-title 3. Additional Settings  
+.form-group
+  label(for="tags") EVENT TYPE 
+  select.custom-select.event-type
+    option(value='1', selected='selected') Select the type of event
+    option(value='2') Appearance or Signing
+    option(value='3') Attraction
+    option(value='4') Camp, Trip, or Retreat
+    option(value='5') Class, Training, or Workshop
+    option(value='6') Concert or Performance
+    option(value='7') Conference
+    option(value='8') Convention
+    option(value='9') Dinner or Gala
+    option(value='10') Festival or Fair
+    option(value='11') Game or Competition
+    option(value='12') Meeting or Networking Event
+    option(value='13') Other
+    option(value='14') Party or Social Gathering
+    option(value='15') Race or Endurance Event
+    option(value='16') Rally
+    option(value='17') Screening
+    option(value='18') Seminar or Talk
+    option(value='19') Tour
+    option(value='20') Tournament
+    option(value='21') Tradeshow, Consumer Show, or Expo
+.form-group
+  label(for="tags") EVENT TOPIC 
+  select.custom-select.event-topic
+    option(value='', selected='selected') Select a topic
+    option(value='1') Auto, Boat & Air
+    option(value='2') Business & Professional
+    option(value='3') Charity & Causes
+    option(value='4') Community & Culture
+    option(value='5') Family & Education
+    option(value='6') Fashion & Beauty
+    option(value='7') Film, Media & Entertainment
+    option(value='8') Food & Drink
+    option(value='9') Government & Politics
+    option(value='10') Health & Wellness
+    option(value='11') Hobbies & Special Interest
+    option(value='12') Home & Lifestyle
+    option(value='13') Music
+    option(value='14') Other
+    option(value='15') Performing & Visual Arts
+    option(value='16') Religion & Spirituality
+    option(value='17') School Activities
+    option(value='18') Science & Technology
+    option(value='19') Seasonal & Holiday
+    option(value='20') Sports & Fitness
+    option(value='21') Travel & Outdoor

@@ -13,7 +13,7 @@ var passport = require('passport');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var questions = require('./routes/questions');
+var festivals = require('./routes/festivals');
 
 var passportConfig = require('./lib/passport-config');
 
@@ -34,7 +34,7 @@ app.locals.querystring = require('querystring');
 // mongodb connect
 //=======================================================
 mongoose.Promise = global.Promise; // ES6 Native Promise를 mongoose에서 사용한다.
-const connStr = 'mongodb://localhost/mjdb3';
+const connStr = 'mongodb://localhost/eventbrite';
 // 아래는 mLab을 사용하는 경우의 예: 본인의 접속 String으로 바꾸세요.
 // const connStr = 'mongodb://dbuser1:mju12345@ds113825.mlab.com:13825/sampledb1';
 mongoose.connect(connStr, {useMongoClient: true });
@@ -89,7 +89,7 @@ app.use(function(req, res, next) {
 // Route
 app.use('/', index);
 app.use('/users', users);
-app.use('/questions', questions);
+app.use('/festivals', festivals);
 require('./routes/auth')(app, passport);
 
 // catch 404 and forward to error handler
