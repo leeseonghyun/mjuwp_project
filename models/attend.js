@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 var schema = new Schema({
   author: { type: Schema.Types.ObjectId, ref: 'User' },
-  question: { type: Schema.Types.ObjectId, ref: 'Question' }, // 참석여부를 나타내는 스키마..
+  festival: { type: Schema.Types.ObjectId, ref: 'Festival' },
   content: {type: String, trim: true, required: true},
   numLikes: {type: Number, default: 0},
   createdAt: {type: Date, default: Date.now}
@@ -13,6 +13,6 @@ var schema = new Schema({
   toObject: {virtuals: true}
 });
 schema.plugin(mongoosePaginate);
-var Answer = mongoose.model('Answer', schema);
+var Attend = mongoose.model('Attend', schema);
 
-module.exports = Answer;
+module.exports = Attend;

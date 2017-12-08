@@ -1,6 +1,6 @@
 const express = require('express');
 const Festival = require('../models/festival');
-const Answer = require('../models/answer');
+const Attend = require('../models/attend');
 const catchErrors = require('../lib/async-error');
 
 const router = express.Router();
@@ -47,11 +47,11 @@ router.get('/:id/edit', needAuth, catchErrors(async (req, res, next) => {
 
 router.get('/:id', catchErrors(async (req, res, next) => {
   const festival = await Festival.findById(req.params.id).populate('author');
-  const answers = await Answer.find({festival: festival.id}).populate('author');
+  const attends = await Attend.find({festival: festival.id}).populate('author');
   festival.numReads++;    // TODO: 동일한 사람이 본 경우에 Read가 증가하지 않도록???
 
   await festival.save();
-  res.render('festivals/show', {festival: festival, answers: answers});
+  res.render('festivals/show', {festival: festival, attends: attends});
 }));
 
 router.put('/:id', catchErrors(async (req, res, next) => {
@@ -89,7 +89,7 @@ router.post('/', needAuth, catchErrors(async (req, res, next) => {
   res.redirect('/festivals');
 }));
 
-router.post('/:id/answers', needAuth, catchErrors(async (req, res, next) => {
+router.post('/:id/attends', needAuth, catchErrors(async (req, res, next) => {
   const user = req.user;
   const festival = await Festival.findById(req.params.id);
 
@@ -98,16 +98,16 @@ router.post('/:id/answers', needAuth, catchErrors(async (req, res, next) => {
     return res.redirect('back');
   }
 
-  var answer = new Answer({
+  var attend = new Attend({
     author: user._id,
     festival: festival._id,
     content: req.body.content
   });
-  await answer.save();
-  festival.numAnswers++;
+  await attend.save();
+  festival.numAttends++;
   await festival.save();
 
-  req.flash('success', 'Successfully answered');
+  req.flash('success', 'Successfully attended');
   res.redirect(`/festivals/${req.params.id}`);
 }));
 

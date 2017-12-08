@@ -1,0 +1,20 @@
+.attend.card
+  .numbers.like-badge
+    .number
+      span.number.num-votes= festival.numLikes
+    .button
+      a.like(href='#', data-id=attend.id)
+        i.fa.fa-thumbs-up
+        | 
+        | Like
+
+  .card-body
+    .content= attend.content
+  .row.card-body
+    .col-sm
+    .col-sm.text-right
+      .author
+        | attended on #{moment(attend.createdAt).format('YYYY-MM-DD')}
+        if attend.author
+          | 
+          | by #[a(href=`/users/${attend.author.id}`)= attend.author.name]

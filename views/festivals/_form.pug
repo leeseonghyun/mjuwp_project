@@ -8,8 +8,8 @@ h2.sub-title 1. Event Details
 .form-group
   label(for="startsends") STARTS &amp; ENDS
   .input-daterange.input-group
-    input#from(type="text", name="from")
-    select.custom-select.from-time
+    input#from(type="text", name="from", value=festival.starts)
+    select.form-control.custom-select.from-time(name="startTime" festival.startTime)
       option(value='1') 00:00
       option(value='2') 00:30
       option(value='3') 01:00
@@ -59,8 +59,8 @@ h2.sub-title 1. Event Details
       option(value='48') 23:00
       option(value='49') 23:30
     p.text-center ~
-    input#to(type="text", name="to")
-    select.custom-select.to-time
+    input#to(type="text", name="to", value=festival.ends)
+    select.form-control.custom-select.to-time(name="endTime" festival.startTime)
         option(value='1') 00:00
         option(value='2') 00:30
         option(value='3') 01:00
@@ -110,14 +110,14 @@ h2.sub-title 1. Event Details
         option(value='48') 23:00
         option(value='49') 23:30
 .form-group
-  label(for="festival") EVENT DISCRIPTION
-  textarea.form-control(name="content", rows="5")= festival.content
+  label(for="description") EVENT DESCRIPTION
+  textarea.form-control(name="description", rows="5")= festival.desc
 .form-group
-  label(for="title") ORGANIZER NAME
-  input.form-control(type="text", name="title", placeholder="Who`s organizing this event?", value=festival.title)
+  label(for="orgname") ORGANIZER NAME
+  input.form-control(type="text", name="orgname", placeholder="Who`s organizing this event?", value=festival.orgname)
 .form-group
-  label(for="festival") ORGANIZER DISCRIPTION
-  textarea.form-control(name="content", rows="5")= festival.content
+  label(for="orgdesc") ORGANIZER DESCRIPTION
+  textarea.form-control(name="orgdesc", rows="5")= festival.orgdesc
 
 h2.sub-title 2. Create Tickets
 .form-group
@@ -126,13 +126,10 @@ h2.sub-title 2. Create Tickets
     |       NOT Free
   input.form-control.price(type="text", name="price", placeholder="Enter ticket price", value=festival.price)
   
-
-
-
 h2.sub-title 3. Additional Settings  
 .form-group
-  label(for="tags") EVENT TYPE 
-  select.custom-select.event-type
+  label(for="festType") EVENT TYPE 
+  select.custom-select.event-type(name="festType")
     option(value='1', selected='selected') Select the type of event
     option(value='2') Appearance or Signing
     option(value='3') Attraction
@@ -155,8 +152,8 @@ h2.sub-title 3. Additional Settings
     option(value='20') Tournament
     option(value='21') Tradeshow, Consumer Show, or Expo
 .form-group
-  label(for="tags") EVENT TOPIC 
-  select.custom-select.event-topic
+  label(for="festTopic") EVENT TOPIC 
+  select.custom-select.event-topic(name="festTopic")
     option(value='', selected='selected') Select a topic
     option(value='1') Auto, Boat & Air
     option(value='2') Business & Professional

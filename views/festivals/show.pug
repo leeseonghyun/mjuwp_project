@@ -16,15 +16,15 @@ block content
           | 
           a.btn.btn-outline-danger.need-confirm-btn(href=`/festivals/${festival.id}?_method=delete`) Delete
       
-    if festival.numAnswers > 0
+    if festival.numAttendss > 0
       hr
-      h3 #{festival.numAnswers} Answer(s)
-      .answers.show
-        each answer in answers
-          include _answer
+      h3 #{festival.numAttends} Attends(s)
+      .attends.show
+        each attend in attends
+          include _attend
 
-    form(action=`/festivals/${festival.id}/answers`, method='POST')
+    form(action=`/festivals/${festival.id}/attends`, method='POST')
       .form-group
-        label(for='answer') Your Answer
+        label(for='attend') Your Attends
         textarea.form-control(name="content", rows="5")
-      button.btn.btn-primary(type="submit") Post Your Answer
+      button.btn.btn-primary(type="submit") Post Your Attends
