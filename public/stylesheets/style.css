@@ -186,6 +186,7 @@ body {
   background-color: #4267B2; }
 
 .main-title {
+  font-family: 'Benton Sans';
   padding-bottom: .5em; }
   .main-title .small {
     float: right;
@@ -193,6 +194,7 @@ body {
     color: #bbb; }
 
 .sub-title {
+  font-family: 'Benton Sans';
   padding: .5em 0;
   color: #888; }
 
