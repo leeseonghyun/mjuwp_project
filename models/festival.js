@@ -5,10 +5,10 @@ const Schema = mongoose.Schema;
 var schema = new Schema({
   author: { type: Schema.Types.ObjectId, ref: 'User' },
   title: {type: String, trim: true, required: true},
-  location: {type: String, trim: true, required: true},
-  starts: {type: Date, trim: true, required: true, format: 'MM/DD/YYYY'},
+  location: {type: String, trim: true},
+  starts: {type: Date, trim: true, format: 'MM/DD/YYYY'},
   startTime: {type: String, trim: true},
-  ends: {type: Date, trim: true, required: true, format: 'MM/DD/YYYY'},
+  ends: {type: Date, trim: true, format: 'MM/DD/YYYY'},
   endTime: {type: String, trim: true},
   desc: {type: String, trim: true},
   festType: {type: String, trim: true},

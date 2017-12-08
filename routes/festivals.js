@@ -54,7 +54,7 @@ router.get('/:id', catchErrors(async (req, res, next) => {
   res.render('festivals/show', {festival: festival, attends: attends});
 }));
 
-router.put('/:id', catchErrors(async (req, res, next) => {
+router.post('/:id', catchErrors(async (req, res, next) => {
   const festival = await Festival.findById(req.params.id);
 
   if (!festival) {
@@ -62,8 +62,20 @@ router.put('/:id', catchErrors(async (req, res, next) => {
     return res.redirect('back');
   }
   festival.title = req.body.title;
-  festival.content = req.body.content;
-  festival.tags = req.body.tags.split(" ").map(e => e.trim());
+  festival.location = req.body.location;
+  festival.starts = req.body.starts;
+  festival.startTime = req.body.startTime;
+  festival.ends = req.body.ends;
+  festival.endTime = req.body.endTime;
+  festival.desc = req.body.desc;
+  festival.festType = req.body.festType;
+  festival.festTopic = req.body.festTopic;
+  festival.orgname = req.body.orgname;
+  festival.orgdesc = req.body.orgdesc;
+  festival.price = req.body.price;
+  festival.numLikes = req.body.numLikes;
+  festival.numReads = req.body.numReads;
+  festival.createdAt = req.body.createdAt;
 
   await festival.save();
   req.flash('success', 'Successfully updated');
@@ -79,10 +91,22 @@ router.delete('/:id', needAuth, catchErrors(async (req, res, next) => {
 router.post('/', needAuth, catchErrors(async (req, res, next) => {
   const user = req.user;
   var festival = new Festival({
-    title: req.body.title,
     author: user._id,
-    content: req.body.content,
-    tags: req.body.tags.split(" ").map(e => e.trim()),
+    title: req.body.title,
+    location: req.body.location,
+    starts: req.body.starts,
+    startTime: req.body.startTime,
+    ends: req.body.ends,
+    endTime: req.body.endTime,
+    desc: req.body.desc,
+    festType: req.body.festType,
+    festTopic: req.body.festTopic,
+    orgname: req.body.orgname,
+    orgdesc: req.body.orgdesc,
+    price: req.body.price,
+    numLikes: req.body.numLikes,
+    numReads: req.body.numReads,
+    createdAt: req.body.createdAt
   });
   await festival.save();
   req.flash('success', 'Successfully posted');
