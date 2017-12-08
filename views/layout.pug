@@ -18,6 +18,7 @@ html
   body
     block top-nav
       include ./includes/topnav
+      
     if flashMessages
       each texts, type in flashMessages
         .container
@@ -25,12 +26,15 @@ html
             each msg in texts
               | #{msg} 
             button.close(type='button', data-dismiss='alert', aria-label='close')
-              span(aria-hidden='true') &times;  
-    block img-unit
+              span(aria-hidden='true') &times; 
+               
+    block img-slideshow
     
     block content
+      
     block card-content
       include ./includes/festcard
+      
     block grid-content
       include ./includes/grid
 
