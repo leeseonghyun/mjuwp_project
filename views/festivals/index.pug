@@ -4,25 +4,42 @@ include ../includes/_paginate
 
 block content
   .container
-    form.form-inline.search-input-group(action='/festivals', method='GET')
-      i.fa.fa-search
-      input.form-control.mr-sm-2(type='text', name='term', placeholder='Search', aria-label='Search', value=term)
-
     h1.main-title 
-      | Questions
-      if festivals.total > 0
-        .small Total #{festivals.total} event(s)
-
+      | Events
     if festivals.total <= 0 
       .alert.alert-info No events available yet
     else
-      .festivals
-        each festival in festivals.docs
-          .festival
-            a.title(href=`/festivals/${festival.id}`)= festival.title
-            include _festival
-
+      .festivals                 
+        table.table.table-hover
+          thead
+            tr
+              th Title
+              th Location
+              th Starts
+              th Ends
+              th By
+              th Attends
+              th      
+          tbody
+            each festival in festivals.docs
+              tr
+                td
+                  a(href=`/festivals/${festival.id}`)= festival.title
+                td= festival.location
+                td= moment(festival.starts).format('MM/DD/YYYY')
+                td= moment(festival.ends).format('MM/DD/YYYY')
+                td= festival.orgname
+                td= festival.numAttends
+                td
+                  if currentUser && festival.author.id == currentUser.id
+                    | 
+                    a.btn.btn-outline-secondary(href=`/festivals/${festival.id}/edit`) Edit
+                    | 
+                    a.btn.btn-outline-danger.need-confirm-btn(href=`/festivals/${festival.id}?_method=delete`) Delete
       +paginate(festivals, '/festivals', {query: "???XXX&&"})
 
     hr
-    a.btn.btn-primary(href='/festivals/new') Ask Event
+    a.btn.btn-primary(href='/festivals/new') Create Event
+block grid-content
+  
+  
