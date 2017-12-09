@@ -171,7 +171,8 @@ body {
   .form-signin .logo {
     text-align: center;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-bottom: 2em; }
     .form-signin .logo .mainlogo {
       width: 72px; }
 
@@ -213,11 +214,11 @@ body {
   font-size: 0.8em;
   color: #81bbf2; }
 
-.numbers {
+.fests {
   text-align: left;
   color: #81bbf2; }
 
-.number {
+.string {
   font-size: 1.2em;
   font-weight: bold;
   color: #0f5ca6; }
