@@ -30,6 +30,8 @@ if (app.get('env') === 'development') {
 app.locals.moment = require('moment');
 app.locals.querystring = require('querystring');
 
+var port = process.env.PORT || 3000;
+
 //=======================================================
 // mongodb connect
 //=======================================================
