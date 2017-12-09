@@ -43,7 +43,7 @@ block content
       each attend in attends
         include _attend
         
-  form(action=`/questions/${festival.id}/answers`, method='POST')
+  form(action=`/questions/${festival.id}/attends`, method='POST')
       .form-group
         label(for='attend') Attends
         textarea.form-control(name="content",placeholder=" '참석' or  '불참' " rows="5")
